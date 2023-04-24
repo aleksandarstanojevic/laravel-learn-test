@@ -1,0 +1,28 @@
+Jedna kategorija se sastoji od:
+ - id-a
+ - imena (obavezno polje, string, min 3, max 20),
+ - opisa (obavezno, textarea, min 10, max 255 karaktera),
+ - teksta (nije obavezno polje, string, max 65000 + ckeditor), active (flag 0/1),
+ - priority-a (broj od 0 pa rastuce koji predstavlja koja je kategorija u nizu i sluzice kasnije za sortiranje kategorija na samom portalu/sajtu)
+ - active - flag 0/1 koji ce kasnije sluzi sa aktivaciju/deaktivaciju kategorije na samom portalu
+ - timestamp-ova + deleted_at sa soft delete
+
+U okviru Categories modula potrebno je implementirati sledece funckionalnosti
+
+1. Migracija za kreiranje tabele categories i njenih kolona sa imenima na engleskom jeziku
+2. Kreiranje kategorije - u trenutku kreiranja kategorije nova kategorije ide na kraj liste, tj. dobija priority
+za jedan veci od trenutno najveceg
+3. Lista svih kategorije
+    - tabela koja izgleda kao datatable, zabraniti pretragu, paginaciju i sortiranje po svim kolonama
+    - kolone tabele su: priority (gde se vidi redni broj kolone iz baze), naziv, active (isto implementirati kao na users tabeli stavka 5 domaceg), opcije (izmena i brisanje kategorije)
+4. Izmena kategorije
+5. Izmena statusa kategorije
+6. Brisanje kategorije
+
+OPCIONI TASK
+- sortiranje kategorija -
+Upotrebom plugina poput https://mdbootstrap.com/docs/b4/jquery/plugins/sortable/ ili https://jqueryui.com/sortable/ ili pak nekom treceg implementirati sortiranje kategorije po principu drag and drop
+
+ 
+
+Obrisati vendor, zapakovati i poslati ZIP folder
